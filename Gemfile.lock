@@ -1,10 +1,11 @@
 GIT
-  remote: git://github.com/opal/opal-haml.git
-  revision: 1ebed53311a0a36ce4650a8838802d039a4dddd1
+  remote: git://github.com/jgaskins/opal-slim.git
+  revision: 96a3b5edd9cda9b699ca5c6afaabb98806bd45a4
   specs:
-    opal-haml (0.2.0)
-      haml
-      opal (>= 0.5.0, < 1.0.0)
+    opal-slim (0.0.1)
+      opal
+      slim (~> 2.1)
+      sprockets (>= 2.12.1, < 4.0.0)
 
 GIT
   remote: git://github.com/opal/opal-rspec.git
@@ -12,14 +13,6 @@ GIT
   specs:
     opal-rspec (0.4.0.beta4)
       opal (~> 0.7.0.beta1)
-
-PATH
-  remote: /Users/jamie/Code/opal-slim
-  specs:
-    opal-slim (0.0.1)
-      opal
-      slim (~> 2.1)
-      sprockets (>= 2.12.1, < 4.0.0)
 
 GEM
   remote: https://rubygems.org/
@@ -83,8 +76,6 @@ GEM
       i18n (~> 0.5)
     globalid (0.3.0)
       activesupport (>= 4.1.0)
-    haml (4.0.6)
-      tilt
     hike (1.2.3)
     i18n (0.7.0.beta1)
     jquery-rails (4.0.0)
@@ -210,7 +201,6 @@ DEPENDENCIES
   capybara
   faker
   jquery-rails (~> 4.0.0.beta2)
-  opal-haml!
   opal-rails (~> 0.7.0.beta1)
   opal-rspec!
   opal-slim!

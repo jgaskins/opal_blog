@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.1.4'
+
 gem 'rails', '4.2.0.rc1'
 gem 'pg'
 gem 'puma'
@@ -9,8 +11,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails', '~> 4.0.0.beta2'
 gem 'opal-rails', '~> 0.7.0.beta1'
 gem 'opal-rspec', github: 'opal/opal-rspec'
-gem 'opal-haml', github: 'opal/opal-haml'
-gem 'opal-slim', path: '/Users/jamie/Code/opal-slim'
+gem 'opal-slim', github: 'jgaskins/opal-slim'
 
 group :development, :test do
   gem 'byebug'
