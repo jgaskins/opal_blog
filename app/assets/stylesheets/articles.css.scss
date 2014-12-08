@@ -1,0 +1,32 @@
+#articles-list {
+  display: inline-block;
+  list-style: none;
+  margin: 0 1em;
+  padding: 0;
+  vertical-align: top;
+  width: 20%;
+
+  li {
+    a {
+      display: block;
+      padding: 1em 2em;
+    }
+  }
+}
+
+#article {
+  display: inline-block;
+  vertical-align: top;
+  width: 70%;
+}
+
+#new-article-form {
+  label {
+    display: block;
+  }
+
+  textarea {
+    height: 10em;
+    width: 30em;
+  }
+}

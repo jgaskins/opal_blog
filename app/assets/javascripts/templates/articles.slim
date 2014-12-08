@@ -1,0 +1,14 @@
+#articles-index
+  - if parent.signed_in?
+    .new-article-link= link_to 'New article', '/articles/new'
+
+  - if sorted_articles.any?
+    ul#articles-list
+      - sorted_articles.each do |article|
+        li= link_to article.title, "/articles/#{article.id}"
+
+    #article= outlet
+  - elsif loading_articles?
+    p Loading articles...
+  - else
+    p#articles-list No articles.

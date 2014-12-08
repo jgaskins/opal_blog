@@ -1,0 +1,16 @@
+header#site-header
+  h1 Jamie Gaskins
+  h2 Rubyist/coffee addict. I punch dragons in the face.
+
+  nav#site-nav
+    a href=root_path   Home
+    a href='/articles' Blog
+    a href='/about'    About
+    - if signed_in?
+      ' Signed in as #{current_user.email}.
+      button#sign-out Sign out
+    - else
+      a href='/session' Sign in
+
+
+= outlet

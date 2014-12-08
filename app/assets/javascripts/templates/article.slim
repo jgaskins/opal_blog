@@ -1,0 +1,20 @@
+- if article
+  - if signed_in?
+    .actions
+      button#delete-article Delete
+  article
+    h1= article.title
+
+    = simple_format h(article.body)
+
+  - if comments_visible?
+    button#toggle-comments Hide Comments
+    ul
+      li Comment 1
+      li Comment 2
+      li Comment 3
+  - else
+    button#toggle-comments Show Comments
+
+- else
+  p Loading...
