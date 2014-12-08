@@ -1,4 +1,4 @@
-require 'clearwater/view'
+require 'clearwater/form_view'
 require 'templates/session'
 
 class SessionView < Clearwater::FormView
