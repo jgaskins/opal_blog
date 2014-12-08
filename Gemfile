@@ -13,6 +13,10 @@ gem 'opal-rails', '~> 0.7.0.beta1'
 gem 'opal-rspec', github: 'opal/opal-rspec'
 gem 'opal-slim', github: 'jgaskins/opal-slim'
 
+group :production do
+  gem 'rails_12factor'
+end
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0.0.beta4'
