@@ -193,11 +193,7 @@ router = Clearwater::Router.new do
   route 'about' => AboutController.new
 end
 
-OpalBlog = Clearwater::Application.new(
-  router: router,
-  controller: ApplicationController.new,
-  store: Clearwater::Store.new(url: '/api/v1/:model/:id')
-)
+OpalBlog = Clearwater::Application.new(router: router)
 
 Document.ready? do
   OpalBlog.call
