@@ -51,7 +51,7 @@ module API
 
         def as_json
           {
-            user: UserSerializer.new(user).as_json,
+            user: user ? UserSerializer.new(user).as_json : nil,
             auth_token: auth_token
           }
         end
