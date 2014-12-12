@@ -2,7 +2,7 @@ module API
   module V1
     class SessionsController < ApplicationController
       def show
-        render json: { user: current_user }
+        render json: SessionSerializer.new(user: current_user).as_json
       end
 
       def create
@@ -31,6 +31,45 @@ module API
 
       def current_user_id
         session[:user_id]
+      end
+
+      class SessionSerializer
+        attr_reader :user
+        attr_reader :auth_token
+
+        def self.with_user user
+          new(user: user)
+        end
+
+        def self.with_credentials email, password
+        end
+
+        def initialize options={}
+          @user = options[:user]
+          @auth_token = SecureRandom.hex
+        end
+
+        def as_json
+          {
+            user: UserSerializer.new(user).as_json,
+            auth_token: auth_token
+          }
+        end
+      end
+
+      class UserSerializer
+        attr_reader :user
+
+        def initialize user
+          @user = user
+        end
+
+        def as_json
+          {
+            id: user.id,
+            email: user.email,
+          }
+        end
       end
     end
   end
