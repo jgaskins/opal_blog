@@ -131,17 +131,11 @@ class ArticleController < Clearwater::Controller
   end
 
   def article
-    @cached_article ||= articles[params[:id].to_i]
+    articles[params[:id].to_i]
   end
 
   def articles
     parent.articles
-  end
-
-  def render_html
-    super.tap do
-      @cached_article = nil
-    end
   end
 
   def delete_article
