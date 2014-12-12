@@ -5,6 +5,7 @@ header#site-header
   nav#site-nav
     a href=root_path   Home
     a href='/articles' Blog
+    a href='/store'    Store
     a href='/about'    About
     - if signed_in?
       ' Signed in as #{current_user.email}.

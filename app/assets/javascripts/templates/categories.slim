@@ -1,0 +1,9 @@
+#categories-index
+  h2 Categories
+
+  - if categories.any?
+    ul#categories
+      - categories.each do |category|
+        li= category.name
+  - else
+    p No Categories

@@ -188,6 +188,8 @@ router = Clearwater::Router.new do
     route ':id' => ArticleController.new
   end
 
+  route 'store' => StoreController.new
+
   route 'session' => SessionController.new
 
   route 'about' => AboutController.new
