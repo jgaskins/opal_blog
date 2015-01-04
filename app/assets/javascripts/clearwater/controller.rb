@@ -37,10 +37,10 @@ module Clearwater
     end
 
     def set_csrf_token
-      ->(xhr) {
+      @set_csrf_token ||= proc do |xhr|
         token = Element['meta[name="csrf-token"]']['content']
         `xhr.setRequestHeader('X-CSRF-Token', #{token})`
-      }
+      end
     end
 
     def self.view &block
