@@ -1,13 +1,14 @@
+require 'clearwater/model'
 require 'time'
 
-class Article
-  attr_reader :id, :created_at
-  attr_accessor :title, :body
+class Article < Clearwater::Model
+  # attr_reader :id, :created_at
+  # attr_accessor :title, :body
+  attributes :id, :title, :body, :created_at
 
   def initialize attrs={}
-    @id = attrs[:id]
-    @title = attrs[:title]
-    @body = attrs[:body]
-    @created_at = Time.parse(attrs[:created_at])
+    super
+
+    @created_at ||= Time.parse(attrs[:created_at]) || Time.now
   end
 end

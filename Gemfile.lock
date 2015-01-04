@@ -1,10 +1,18 @@
 GIT
+  remote: git://github.com/jgaskins/opal-jquery.git
+  revision: 854dfe46800e987ba562d97a0cacc16ec96b4ce3
+  branch: event-key-modifiers
+  specs:
+    opal-jquery (0.3.0.beta1)
+      opal (~> 0.7.0.beta1)
+
+GIT
   remote: git://github.com/jgaskins/opal-slim.git
-  revision: 96a3b5edd9cda9b699ca5c6afaabb98806bd45a4
+  revision: b415fc1f80d79ea706a9170f1e4863cca22526a6
   specs:
     opal-slim (0.0.1)
       opal
-      slim (~> 2.1)
+      slim (~> 3.0)
       sprockets (>= 2.12.1, < 4.0.0)
 
 GIT
@@ -17,40 +25,40 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    actionmailer (4.2.0.rc1)
-      actionpack (= 4.2.0.rc1)
-      actionview (= 4.2.0.rc1)
-      activejob (= 4.2.0.rc1)
+    actionmailer (4.2.0)
+      actionpack (= 4.2.0)
+      actionview (= 4.2.0)
+      activejob (= 4.2.0)
       mail (~> 2.5, >= 2.5.4)
       rails-dom-testing (~> 1.0, >= 1.0.5)
-    actionpack (4.2.0.rc1)
-      actionview (= 4.2.0.rc1)
-      activesupport (= 4.2.0.rc1)
-      rack (~> 1.6.0.beta2)
+    actionpack (4.2.0)
+      actionview (= 4.2.0)
+      activesupport (= 4.2.0)
+      rack (~> 1.6.0)
       rack-test (~> 0.6.2)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.1)
-    actionview (4.2.0.rc1)
-      activesupport (= 4.2.0.rc1)
+    actionview (4.2.0)
+      activesupport (= 4.2.0)
       builder (~> 3.1)
       erubis (~> 2.7.0)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.1)
-    activejob (4.2.0.rc1)
-      activesupport (= 4.2.0.rc1)
+    activejob (4.2.0)
+      activesupport (= 4.2.0)
       globalid (>= 0.3.0)
-    activemodel (4.2.0.rc1)
-      activesupport (= 4.2.0.rc1)
+    activemodel (4.2.0)
+      activesupport (= 4.2.0)
       builder (~> 3.1)
-    activerecord (4.2.0.rc1)
-      activemodel (= 4.2.0.rc1)
-      activesupport (= 4.2.0.rc1)
+    activerecord (4.2.0)
+      activemodel (= 4.2.0)
+      activesupport (= 4.2.0)
       arel (~> 6.0)
-    activesupport (4.2.0.rc1)
-      i18n (>= 0.7.0.beta1, < 0.8)
+    activesupport (4.2.0)
+      i18n (~> 0.7)
       json (~> 1.7, >= 1.7.7)
       minitest (~> 5.1)
-      thread_safe (~> 0.1)
+      thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.0)
     binding_of_caller (0.7.2)
@@ -78,10 +86,10 @@ GEM
     globalid (0.3.0)
       activesupport (>= 4.1.0)
     hike (1.2.3)
-    i18n (0.7.0.beta1)
-    jquery-rails (4.0.0)
+    i18n (0.7.0)
+    jquery-rails (4.0.3)
       rails-dom-testing (~> 1.0)
-      railties (>= 4.2.0.beta, < 5.0)
+      railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     json (1.8.1)
     loofah (2.0.1)
@@ -90,8 +98,8 @@ GEM
       mime-types (>= 1.16, < 3)
     method_source (0.8.2)
     mime-types (2.4.3)
-    mini_portile (0.6.1)
-    minitest (5.4.3)
+    mini_portile (0.6.2)
+    minitest (5.5.0)
     multi_json (1.10.1)
     nokogiri (1.6.5)
       mini_portile (~> 0.6.0)
@@ -102,8 +110,6 @@ GEM
       tilt (~> 1.4)
     opal-activesupport (0.0.5)
       opal
-    opal-jquery (0.3.0.beta1)
-      opal (~> 0.7.0.beta1)
     opal-rails (0.7.0.beta2)
       jquery-rails
       opal (~> 0.7.0.beta1)
@@ -111,7 +117,7 @@ GEM
       opal-jquery (~> 0.3.0.beta1)
       opal-rspec (~> 0.4.0.beta4)
       rails (>= 3.2, < 5.0)
-    pg (0.17.1)
+    pg (0.18.0)
     pry (0.10.1)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -120,19 +126,19 @@ GEM
       pry (>= 0.9.10)
     puma (2.10.2)
       rack (>= 1.1, < 2.0)
-    rack (1.6.0.beta2)
+    rack (1.6.0)
     rack-test (0.6.2)
       rack (>= 1.0)
-    rails (4.2.0.rc1)
-      actionmailer (= 4.2.0.rc1)
-      actionpack (= 4.2.0.rc1)
-      actionview (= 4.2.0.rc1)
-      activejob (= 4.2.0.rc1)
-      activemodel (= 4.2.0.rc1)
-      activerecord (= 4.2.0.rc1)
-      activesupport (= 4.2.0.rc1)
+    rails (4.2.0)
+      actionmailer (= 4.2.0)
+      actionpack (= 4.2.0)
+      actionview (= 4.2.0)
+      activejob (= 4.2.0)
+      activemodel (= 4.2.0)
+      activerecord (= 4.2.0)
+      activesupport (= 4.2.0)
       bundler (>= 1.3.0, < 2.0)
-      railties (= 4.2.0.rc1)
+      railties (= 4.2.0)
       sprockets-rails
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
@@ -145,11 +151,11 @@ GEM
     rails_12factor (0.0.3)
       rails_serve_static_assets
       rails_stdout_logging
-    rails_serve_static_assets (0.0.2)
+    rails_serve_static_assets (0.0.3)
     rails_stdout_logging (0.0.3)
-    railties (4.2.0.rc1)
-      actionpack (= 4.2.0.rc1)
-      activesupport (= 4.2.0.rc1)
+    railties (4.2.0)
+      actionpack (= 4.2.0)
+      activesupport (= 4.2.0)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.4.2)
@@ -170,13 +176,14 @@ GEM
       rspec-support (~> 3.1.0)
     rspec-support (3.1.2)
     sass (3.4.9)
-    sass-rails (5.0.0.beta1)
+    sass-rails (5.0.1)
       railties (>= 4.0.0, < 5.0)
-      sass (~> 3.2)
-      sprockets (~> 2.12)
+      sass (~> 3.1)
+      sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
-    slim (2.1.0)
-      temple (~> 0.6.9)
+      tilt (~> 1.1)
+    slim (3.0.1)
+      temple (~> 0.7.3)
       tilt (>= 1.3.3, < 2.1)
     slop (3.6.0)
     sourcemap (0.1.1)
@@ -189,13 +196,13 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
-    temple (0.6.10)
+    temple (0.7.4)
     thor (0.19.1)
     thread_safe (0.3.4)
     tilt (1.4.1)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    uglifier (2.5.3)
+    uglifier (2.6.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     web-console (2.0.0)
@@ -213,16 +220,17 @@ DEPENDENCIES
   byebug
   capybara
   faker
-  jquery-rails (~> 4.0.0.beta2)
+  jquery-rails (~> 4.0.0)
+  opal-jquery!
   opal-rails (~> 0.7.0.beta1)
   opal-rspec!
   opal-slim!
   pg
   pry-rails
   puma
-  rails (= 4.2.0.rc1)
+  rails (= 4.2.0)
   rails_12factor
   rspec-rails
-  sass-rails (~> 5.0.0.beta1)
+  sass-rails (~> 5.0.0)
   uglifier (>= 1.3.0)
-  web-console (~> 2.0.0.beta4)
+  web-console

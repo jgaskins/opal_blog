@@ -25,21 +25,21 @@ class ApplicationController < Clearwater::Controller
   default_outlet { ApplicationIndexController.new }
 
   def current_user
-    return @current_user if defined? @current_user
-    @current_user = nil
+    return session.user if session.user || @loading_session
 
     unless @loading_session
-      HTTP.get('/api/v1/session') do |response|
-        if response.ok? && response.json[:user]
-          @current_user = User.new(response.json[:user])
-          @loading_session = false
-          call
-        end
+      HTTP.get('/api/v1/session').then do |response|
+        session.user = User.new(response.json[:user])
+        @loading_session = false
       end
     end
 
     @loading_session = true
-    @current_user = nil
+    session.user
+  end
+
+  def session
+    @session ||= Session.new
   end
 
   def signed_in?
@@ -51,7 +51,7 @@ class ApplicationController < Clearwater::Controller
               beforeSend: set_csrf_token,
               payload: { session: attributes }) do |response|
       if response.ok?
-        @current_user = User.new(response.json[:user])
+        session.user = User.new(response.json[:user])
         router.navigate_to '/'
       else
         alert 'Could not sign in.'
@@ -62,8 +62,7 @@ class ApplicationController < Clearwater::Controller
   def sign_out
     HTTP.delete('/api/v1/session', beforeSend: set_csrf_token) do |response|
       if response.ok?
-        @current_user = nil
-        call
+        session.user = nil
       else
         alert 'Could not tell the server to sign out.'
       end

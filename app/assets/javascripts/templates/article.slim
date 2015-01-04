@@ -3,9 +3,11 @@
     .actions
       button#delete-article Delete
   article
-    h1= article.title
+    h1= bind article, :title do
+      = article.title
 
-    = simple_format h(article.body)
+    = bind article, :body do
+      = simple_format h(article.body)
 
   - if comments_visible?
     button#toggle-comments Hide Comments
