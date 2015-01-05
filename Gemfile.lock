@@ -1,19 +1,9 @@
 GIT
-  remote: git://github.com/jgaskins/opal-jquery.git
-  revision: 854dfe46800e987ba562d97a0cacc16ec96b4ce3
-  branch: event-key-modifiers
+  remote: git://github.com/opal/opal-jquery.git
+  revision: 1ca523db7dcf31ec0fa4669561d5502e93d526bf
   specs:
     opal-jquery (0.3.0.beta1)
       opal (~> 0.7.0.beta1)
-
-GIT
-  remote: git://github.com/jgaskins/opal-slim.git
-  revision: b415fc1f80d79ea706a9170f1e4863cca22526a6
-  specs:
-    opal-slim (0.0.1)
-      opal
-      slim (~> 3.0)
-      sprockets (>= 2.12.1, < 4.0.0)
 
 GIT
   remote: git://github.com/opal/opal-rspec.git
@@ -117,6 +107,10 @@ GEM
       opal-jquery (~> 0.3.0.beta1)
       opal-rspec (~> 0.4.0.beta4)
       rails (>= 3.2, < 5.0)
+    opal-slim (1.0.0)
+      opal (~> 0.7.0.beta1)
+      slim (~> 3.0)
+      sprockets (>= 2.12.1, < 4.0.0)
     pg (0.18.0)
     pry (0.10.1)
       coderay (~> 1.1.0)
@@ -224,7 +218,7 @@ DEPENDENCIES
   opal-jquery!
   opal-rails (~> 0.7.0.beta1)
   opal-rspec!
-  opal-slim!
+  opal-slim
   pg
   pry-rails
   puma

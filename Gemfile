@@ -11,9 +11,9 @@ gem 'sass-rails', '~> 5.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails', '~> 4.0.0'
 gem 'opal-rails', '~> 0.7.0.beta1'
-gem 'opal-jquery', github: 'jgaskins/opal-jquery', branch: 'event-key-modifiers'
+gem 'opal-jquery', github: 'opal/opal-jquery'
 gem 'opal-rspec', github: 'opal/opal-rspec'
-gem 'opal-slim', github: 'jgaskins/opal-slim'
+gem 'opal-slim'
 
 group :production do
   gem 'rails_12factor'
